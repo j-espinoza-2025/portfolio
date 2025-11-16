@@ -661,16 +661,57 @@ textarea {
 
 .skills {
   display: flex;
-  flex-wrap: wrap; }
-  .skills__skill {
-    padding: 1rem 2rem;
-    margin-bottom: 1.5rem;
-    margin-right: 1.5rem;
-    font-size: 1.6rem;
-    background: rgba(153, 153, 153, 0.2);
-    border-radius: 5px;
-    font-weight: 600;
-    color: #777; }
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.skills__group {
+  min-width: 22rem;
+}
+
+.skills__group-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.skills__list {
+  list-style: disc inside;
+  margin: 0;
+  padding: 0;
+  color: #555;
+  font-size: 1.9rem;
+  line-height: 1.7;
+}
+
+/* Legacy single-tag skill chips (kept for compatibility) */
+.skills__skill {
+  padding: 1rem 2rem;
+  margin-bottom: 1.5rem;
+  margin-right: 1.5rem;
+  font-size: 1.8rem;
+  background: rgba(153, 153, 153, 0.2);
+  border-radius: 5px;
+  font-weight: 600;
+  color: #777;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .skills {
+    gap: 2rem;
+    flex-direction: column;
+  }
+  .skills__group {
+    min-width: auto;
+  }
+  .skills__group-title {
+    font-size: 1.9rem;
+  }
+  .skills__list {
+    font-size: 1.7rem;
+  }
+}
 
 .mouse {
   width: 25px;
